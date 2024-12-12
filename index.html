@@ -97,10 +97,11 @@
         }
 
         .about-section {
-            padding: 60px 20px;
+            padding: 80px 20px;
             text-align: center;
             background: #ff4d4f;
             color: white;
+            margin-top: 40px;
         }
 
         .about-section h2 {
@@ -118,6 +119,18 @@
         .cards-section {
             padding: 80px 20px;
             background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cards-section h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            font-family: 'Permanent Marker', cursive;
+        }
+
+        .card-container {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
@@ -145,6 +158,25 @@
             margin-bottom: 15px;
         }
 
+        .prize-section {
+            padding: 60px 20px;
+            background: #ffe66d;
+            text-align: center;
+        }
+
+        .prize-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-family: 'Permanent Marker', cursive;
+        }
+
+        .prize-section p {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
         footer {
             background: #333;
             color: white;
@@ -169,7 +201,6 @@
             <a href="#">Telegram</a>
             <a href="#">X</a>
             <a href="#">DexScreener</a>
-            <a href="#">CA</a>
         </nav>
     </header>
 
@@ -182,18 +213,28 @@
 
     <section id="about" class="about-section">
         <h2>About Poco Santa</h2>
-        <p>Poco Santa is here to make this Christmas season even more special! Join the Poco community, share memes, and participate in exciting contests to win daily rewards.</p>
+        <p>Poco Santa is here to make this Christmas season even more special! Join the Poco community, share memes, and participate in exciting contests to win daily rewards. We aim to spread joy, laughter, and festive cheer throughout the crypto community. Be a part of our growing family and celebrate the season of giving with Poco Santa!</p>
+		
+		CA: HpaPfnQN3ATmMer8mN8i39zVwv618Hs4azXy9t48pump
     </section>
 
     <section class="cards-section">
-        <div class="card">
-            <img src="PocoTransparant.jpg" alt="Daily Adventure">
-            <p>Today, Poco is at the beach enjoying some sun and fun!</p>
+        <h2>Poco Life Updates</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="PocoTransparant.jpg" alt="Daily Adventure">
+                <p>Today, Poco is at the beach enjoying some sun and fun!</p>
+            </div>
+            <div class="card">
+                <img src="PocoTransparant.jpg" alt="Night Out">
+                <p>Last night, Poco was spotted spreading holiday vibes at a Christmas party!</p>
+            </div>
         </div>
-        <div class="card">
-            <img src="PocoTransparant.jpg" alt="Night Out">
-            <p>Last night, Poco was spotted spreading holiday vibes at a Christmas party!</p>
-        </div>
+    </section>
+
+    <section class="prize-section">
+        <h2>Win Exciting Prizes!</h2>
+        <p>Submit your Poco Santa memes in our Telegram channel! Every day, we will pick a winner for a special prize. On Christmas, the community will vote for the best Poco meme of the season. Don’t miss your chance to be crowned the ultimate meme champion!</p>
     </section>
 
     <footer>
