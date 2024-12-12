@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Poco Santa - The cutest Christmas Meme Coin">
+    <title>Poco Santa</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Permanent+Marker&display=swap">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #fef5f5;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #ff4d4f;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            margin: 0;
+            font-family: 'Permanent Marker', cursive;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffe66d;
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('PocoBanner.jpg') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-family: 'Permanent Marker', cursive;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin: 10px 0 20px;
+        }
+
+        .hero .countdown {
+            font-size: 1.2rem;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .hero .button {
+            background-color: #ffe66d;
+            color: #ff4d4f;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .hero .button:hover {
+            background-color: #ff4d4f;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .about-section {
+            padding: 60px 20px;
+            text-align: center;
+            background: #ff4d4f;
+            color: white;
+        }
+
+        .about-section h2 {
+            font-size: 2.5rem;
+            font-family: 'Permanent Marker', cursive;
+        }
+
+        .about-section p {
+            max-width: 600px;
+            margin: 20px auto;
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .cards-section {
+            padding: 80px 20px;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        footer a {
+            color: #ffe66d;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Poco Santa</h1>
+        <nav>
+            <a href="#">Telegram</a>
+            <a href="#">X</a>
+            <a href="#">DexScreener</a>
+            <a href="#">CA</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to Poco Santa</h1>
+        <p>The cutest Christmas meme coin spreading festive cheer and rewards!</p>
+        <div class="countdown" id="timer">Loading countdown...</div>
+        <a href="#about" class="button">Learn More</a>
+    </section>
+
+    <section id="about" class="about-section">
+        <h2>About Poco Santa</h2>
+        <p>Poco Santa is here to make this Christmas season even more special! Join the Poco community, share memes, and participate in exciting contests to win daily rewards.</p>
+    </section>
+
+    <section class="cards-section">
+        <div class="card">
+            <img src="PocoTransparant.jpg" alt="Daily Adventure">
+            <p>Today, Poco is at the beach enjoying some sun and fun!</p>
+        </div>
+        <div class="card">
+            <img src="PocoTransparant.jpg" alt="Night Out">
+            <p>Last night, Poco was spotted spreading holiday vibes at a Christmas party!</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Poco Santa. All Rights Reserved. <a href="#">Privacy Policy</a></p>
+    </footer>
+
+    <script>
+        function countdownToChristmas() {
+            const christmasDate = new Date('December 25, 2024 00:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = christmasDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('timer').textContent = `${days} Days, ${hours} Hours, ${minutes} Minutes, ${seconds} Seconds`;
+
+            if (distance < 0) {
+                document.getElementById('timer').textContent = "Merry Christmas!";
+            }
+        }
+
+        setInterval(countdownToChristmas, 1000);
+    </script>
+</body>
+</html>
